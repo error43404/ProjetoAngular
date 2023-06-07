@@ -1,22 +1,31 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      Fatec
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
 
-  <div id="container">
-    <h3>Projeto com Bootstrap e Ionic!</h3>
-    <hr>
-    <p>Componentes Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components"> - UI Components</a></p>
-    <p>Componentes Bootstrap <a target="_blank" rel="noopener noreferrer" href="https://getbootstrap.com/docs/5.3/components/buttons/"> - UI Components</a></p>
-  </div>
-</ion-content>
+  <ion-row class="ion-justify-content-center">
+    <ion-col size="12" size-lg="10">
+
+
+
+  <ion-segment value = "ads" [scrollable]="true" (ionChange)="trocaCurso($event)">
+    <ion-segment-button value = "ads">
+      <ion-label>analise e desenvolvimento de sistemas</ion-label>
+    </ion-segment-button>    
+
+    <ion-segment-button value = "adm">
+      <ion-label>administração</ion-label>
+    </ion-segment-button>    
+
+    <ion-segment-button value = "gti">
+      <ion-label>gestão de tecnologia da informação</ion-label>
+    </ion-segment-button>    
+  </ion-segment>
+</ion-header>
+    </ion-col>
+  </ion-row>
