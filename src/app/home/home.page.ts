@@ -19,12 +19,12 @@ export class HomePage {
   constructor() {
   }
 
-  buttonNumericClick(number) {
+  buttonNumericClick(number: any) {
       this.operationsValue += '' + number;
       this.calc();
   }
 
-  buttonCalcClick(operationCalc) {
+  buttonCalcClick(operationCalc: any) {
       if (this.isLastOperationCalc()) {
           this.operationsValue = this.operationsValue.substr(0, this.operationsValue.length - 1);
       }
@@ -60,10 +60,10 @@ export class HomePage {
       expression = this.replaceAll(expression, 'x', '*');
       expression = this.replaceAll(expression, '÷', '/');
 
-      this.result = evaluate(expression);
+      this.result = eval(expression);
   }
 
-      replaceAll(target, search, replacement) {
+      replaceAll(target: any, search: any, replacement: any) {
       return target.replace(new RegExp(search, 'g'), replacement);
   }
 
